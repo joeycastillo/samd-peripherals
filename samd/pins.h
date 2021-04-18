@@ -57,6 +57,10 @@ typedef struct {
     #define NUM_ADC_PER_PIN 2
 #endif
 #define NUM_SERCOMS_PER_PIN 2
+#ifdef SAML22
+    #define NUM_TIMERS_PER_PIN 2
+    #define NUM_ADC_PER_PIN 1
+#endif
 
 typedef struct {
     PIN_PREFIX_FIELDS
@@ -75,6 +79,9 @@ typedef struct {
 #endif
 #ifdef SAM_D5X_E5X
 #include "samd/sam_d5x_e5x/pins.h"
+#endif
+#ifdef SAML22
+#include "samd/saml22/pins.h"
 #endif
 
 #endif // MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_PINS_H
