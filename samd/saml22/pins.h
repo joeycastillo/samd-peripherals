@@ -24,8 +24,8 @@
  * THE SOFTWARE.
  */
 
-#ifndef MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_SAMD21_PINS_H
-#define MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_SAMD21_PINS_H
+#ifndef MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_SAML22_PINS_H
+#define MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_SAML22_PINS_H
 
 #include "include/sam.h"
 
@@ -39,7 +39,7 @@
 
 #define NO_PIN PORT_BITS
 
-// Pins in datasheet order.
+// Pins in datasheet order. Skipping port C for now, only exists on N variant.
 #if defined(PIN_PA00) && !defined(IGNORE_PIN_PA00)
 extern const mcu_pin_obj_t pin_PA00;
 #endif
@@ -93,9 +93,8 @@ extern const mcu_pin_obj_t pin_PA10;
 #endif
 #if defined(PIN_PA11) && !defined(IGNORE_PIN_PA11)
 extern const mcu_pin_obj_t pin_PA11;
-#endif
-#if defined(PIN_PB10) && !defined(IGNORE_PIN_PB10)
-extern const mcu_pin_obj_t pin_PB10;
+
+// Second page.
 #endif
 #if defined(PIN_PB11) && !defined(IGNORE_PIN_PB11)
 extern const mcu_pin_obj_t pin_PB11;
@@ -109,8 +108,6 @@ extern const mcu_pin_obj_t pin_PB13;
 #if defined(PIN_PB14) && !defined(IGNORE_PIN_PB14)
 extern const mcu_pin_obj_t pin_PB14;
 #endif
-
-// Second page.
 #if defined(PIN_PB15) && !defined(IGNORE_PIN_PB15)
 extern const mcu_pin_obj_t pin_PB15;
 #endif
@@ -168,11 +165,10 @@ extern const mcu_pin_obj_t pin_PB22;
 #if defined(PIN_PB23) && !defined(IGNORE_PIN_PB23)
 extern const mcu_pin_obj_t pin_PB23;
 #endif
+
+// Third page.
 #if defined(PIN_PA27) && !defined(IGNORE_PIN_PA27)
 extern const mcu_pin_obj_t pin_PA27;
-#endif
-#if defined(PIN_PA28) && !defined(IGNORE_PIN_PA28)
-extern const mcu_pin_obj_t pin_PA28;
 #endif
 #if defined(PIN_PA30) && !defined(IGNORE_PIN_PA30)
 extern const mcu_pin_obj_t pin_PA30;
@@ -199,15 +195,4 @@ extern const mcu_pin_obj_t pin_PB02;
 extern const mcu_pin_obj_t pin_PB03;
 #endif
 
-// For SAMR
-#if defined(PIN_PC16) && !defined(IGNORE_PIN_PC16)
-extern const mcu_pin_obj_t pin_PC16;
-#endif
-#if defined(PIN_PC18) && !defined(IGNORE_PIN_PC18)
-extern const mcu_pin_obj_t pin_PC18;
-#endif
-#if defined(PIN_PC19) && !defined(IGNORE_PIN_PC19)
-extern const mcu_pin_obj_t pin_PC19;
-#endif
-
-#endif  // MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_SAMD21_PINS_H
+#endif  // MICROPY_INCLUDED_ATMEL_SAMD_PERIPHERALS_SAML22_PINS_H
