@@ -47,6 +47,11 @@ COMPILER_ALIGNED(16) static DmacDescriptor write_back_descriptors[DMA_CHANNEL_CO
 #define FIRST_SERCOM_RX_TRIGSRC 0x04
 #define FIRST_SERCOM_TX_TRIGSRC 0x05
 #endif
+#ifdef SAML22
+// joey 4/18/21: I don't know what this is. TODO: figure it out.
+#define FIRST_SERCOM_RX_TRIGSRC 0x01
+#define FIRST_SERCOM_TX_TRIGSRC 0x02
+#endif
 
 void init_shared_dma(void) {
     // Turn on the clocks
@@ -57,6 +62,10 @@ void init_shared_dma(void) {
     #ifdef SAMD21
     PM->AHBMASK.reg |= PM_AHBMASK_DMAC;
     PM->APBBMASK.reg |= PM_APBBMASK_DMAC;
+    #endif
+
+    #ifdef SAML22
+    MCLK->AHBMASK.reg |= MCLK_AHBMASK_DMAC;
     #endif
 
     DMAC->CTRL.reg = DMAC_CTRL_SWRST;
