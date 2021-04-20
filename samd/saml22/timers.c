@@ -33,7 +33,7 @@
 
 #include "hpl/gclk/hpl_gclk_base.h"
 
-const uint8_t tcc_cc_num[5] = {6, 4, 3, 2, 2};
+const uint8_t tcc_cc_num[3] = {4, 2, 2};
 const uint8_t tc_gclk_ids[TC_INST_NUM] = {TC0_GCLK_ID,
                                           TC1_GCLK_ID,
                                           TC2_GCLK_ID,
