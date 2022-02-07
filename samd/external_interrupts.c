@@ -74,7 +74,7 @@ void turn_off_eic_channel(uint8_t eic_channel) {
     #endif
     channel_data[eic_channel] = NULL;
 
-    #ifdef SAMD21
+    #if defined(SAMD21) || defined(SAML22)
     if (EIC->INTENSET.reg == 0) {
         NVIC_DisableIRQ(EIC_IRQn);
         NVIC_ClearPendingIRQ(EIC_IRQn);
