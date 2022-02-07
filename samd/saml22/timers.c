@@ -33,19 +33,21 @@
 
 #include "hpl/gclk/hpl_gclk_base.h"
 
-const uint8_t tcc_cc_num[3] = {4, 2, 2};
+const uint8_t tcc_cc_num[1] = {4};
 const uint8_t tc_gclk_ids[TC_INST_NUM] = {TC0_GCLK_ID,
                                           TC1_GCLK_ID,
                                           TC2_GCLK_ID,
                                           TC3_GCLK_ID,
                                       };
+const uint8_t tcc_gclk_ids[TCC_INST_NUM] = {TCC0_GCLK_ID,
+                                    };
 
 void turn_on_clocks(bool is_tc, uint8_t index, uint32_t gclk_index) {
     uint8_t gclk_id;
     if (is_tc) {
         gclk_id = tc_gclk_ids[index];
     } else {
-        gclk_id = TCC0_GCLK_ID;
+        gclk_id = tcc_gclk_ids[TCC_INST_NUM]; // TCC0_GCLK_ID
     }
     // Turn on the clocks for the peripherals.
     if (is_tc) {

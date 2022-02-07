@@ -42,10 +42,9 @@ extern const uint8_t tc_gclk_ids[TC_INST_NUM];
 extern const uint8_t tcc_gclk_ids[TCC_INST_NUM];
 #endif
 #ifdef SAML22
-// joey 4/19/21: is this right?
-extern const uint8_t tcc_cc_num[3];
+extern const uint8_t tcc_cc_num[1];
 extern const uint8_t tc_gclk_ids[TC_INST_NUM];
-extern const uint8_t tcc_gclk_ids[3];
+extern const uint8_t tcc_gclk_ids[1];
 #endif
 extern Tc* const tc_insts[TC_INST_NUM];
 extern Tcc* const tcc_insts[TCC_INST_NUM];
