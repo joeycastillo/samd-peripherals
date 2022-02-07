@@ -48,9 +48,8 @@ COMPILER_ALIGNED(16) static DmacDescriptor write_back_descriptors[DMA_CHANNEL_CO
 #define FIRST_SERCOM_TX_TRIGSRC 0x05
 #endif
 #ifdef SAML22
-// joey 4/18/21: I don't know what this is. TODO: figure it out.
-#define FIRST_SERCOM_RX_TRIGSRC 0x01
-#define FIRST_SERCOM_TX_TRIGSRC 0x02
+#define FIRST_SERCOM_RX_TRIGSRC 0x02
+#define FIRST_SERCOM_TX_TRIGSRC 0x03
 #endif
 
 void init_shared_dma(void) {
