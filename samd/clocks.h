@@ -38,6 +38,9 @@
 #ifdef SAMD21
 #define CLOCK_48MHZ GCLK_GENCTRL_SRC_DFLL48M_Val
 #endif
+#ifdef SAML22
+#define CLOCK_48MHZ GCLK_GENCTRL_SRC_DFLL48M_Val
+#endif
 
 // Pass to clock_init() if fine calibration not known.
 #define DEFAULT_DFLL48M_FINE_CALIBRATION 512
