@@ -47,7 +47,7 @@ void turn_on_clocks(bool is_tc, uint8_t index, uint32_t gclk_index) {
     if (is_tc) {
         gclk_id = tc_gclk_ids[index];
     } else {
-        gclk_id = tcc_gclk_ids[TCC_INST_NUM]; // TCC0_GCLK_ID
+        gclk_id = tcc_gclk_ids[0];
     }
     // Turn on the clocks for the peripherals.
     if (is_tc) {
